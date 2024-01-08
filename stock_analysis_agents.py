@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from crewai import Agent
 
 from tools.browser_tools import BrowserTools
@@ -11,12 +12,7 @@ from langchain.llms.openai import OpenAIChat
 
 ollama_openhermes = Ollama(model='openhermes')
 
-from dotenv import load_dotenv
-
 load_dotenv()
-
-
-
 
 class StockAnalysisAgents():
   def financial_analyst(self):
@@ -36,7 +32,7 @@ class StockAnalysisAgents():
         SECTools.search_10k
       ],
     #   llm=ollama_openhermes
-        llm=OpenAIChat(model_name="gpt-3.5", temperature=0.7)
+        llm=OpenAIChat(model_name="gpt-3.5-turbo", temperature=0.7)
     )
 
   def research_analyst(self):
@@ -79,5 +75,5 @@ class StockAnalysisAgents():
         YahooFinanceNewsTool()
       ],
     #   llm=ollama_openhermes
-        llm=OpenAIChat(model_name="gpt-3.5", temperature=0.7)
+        llm=OpenAIChat(model_name="gpt-3.5-turbo", temperature=0.7)
     )
