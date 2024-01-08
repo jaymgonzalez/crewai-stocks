@@ -1,0 +1,12 @@
+crewai==0.1.6
+langchain==0.0.335
+openai==0.28.1
+unstructured==0.10.25
+pyowm==3.3.0
+tools>=0.1.9,<0.2.0  # Assuming you want to stick to versions 0.1.x
+wikipedia==1.4.0
+yfinance==0.2.33
+sec-api==1.0.17
+tiktoken==0.5.2
+faiss-cpu==1.7.4
+python-dotenv==1.0.0
